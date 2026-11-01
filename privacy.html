@@ -17,13 +17,13 @@
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: 30 October 2026</p>
+  <p class="meta">Last updated: 1 November 2026</p>
   <p class="draft-notice">Draft under legal review — see the highlighted placeholders below and the team's decisions doc. Not yet final.</p>
 
   <p>
-    FoodieNet ("we", "us"), operated by
-    <span class="pending">[PENDING — legal operator name, company number, registered office and jurisdiction once incorporated]</span>,
-    connects food creators with restaurants for content collaborations.
+    FoodieNet ("we", "us"), operated by Net Ventures Limited (company number 17553956,
+    registered office at Unit 7 Sun Valley Business Park, Winnall Close, Winchester, England,
+    SO23 0LB), connects food creators with restaurants for content collaborations.
     This policy explains what information we collect through the FoodieNet mobile app and admin
     dashboard, why, and how you can control it.
   </p>
@@ -66,8 +66,9 @@
       </li>
       <li>
         <strong>Diagnostic data</strong> — crash and error reports (via Sentry on the mobile app
-        and API) to help us fix bugs.
-        <span class="pending">[PENDING — we don't currently have automatic scrubbing of personal data from these reports — this needs building before this claim can be made accurately; until then this policy should say what's actually true]</span>.
+        and API) to help us fix bugs. We automatically filter out personal information (e.g. your
+        email, phone number, authentication tokens, and precise location) from these reports
+        before they're sent.
       </li>
       <li>
         <strong>Payment information</strong> — we don't currently collect or process any
@@ -114,9 +115,9 @@
     </p>
     <ul>
       <li><strong>Clerk</strong> — authentication; holds your email and sign-in details.</li>
-      <li><strong>Railway</strong> — hosts our backend. <span class="pending">[PENDING — confirm hosting region/location]</span>.</li>
+      <li><strong>Railway</strong> — hosts our backend, in the EU (West Europe region).</li>
       <li><strong>Neon</strong> — hosts our database, in the EU (London, UK). </li>
-      <li><strong>Cloudflare R2</strong> — stores uploaded files (profile photos, proof screenshots). Uploaded files are currently accessible via a public link to anyone who has it — we're reviewing whether this needs to change for sensitive uploads like proof screenshots.</li>
+      <li><strong>Cloudflare R2</strong> — stores uploaded files. Promotional content you'd expect to be public (offer photos/videos, restaurant logos) is stored in a public bucket. Your profile photo and any proof screenshot you submit are stored in a separate, private bucket with no public link — they're only ever accessed through a short-lived link generated when FoodieNet's team (or, once built, the relevant restaurant) needs to view them.</li>
       <li><strong>Resend</strong> — sends transactional emails to your own address.</li>
       <li><strong>Sentry</strong> — error monitoring on our mobile app and backend.</li>
       <li><strong>Google</strong> — geocoding your postcode/city/country into approximate coordinates.</li>
@@ -130,7 +131,13 @@
     <h2>Data retention</h2>
     <p>
       We retain your account and collaboration data for as long as your account is active.
-      <span class="pending">[PENDING — specific retention periods and the justification for each data category (e.g. how long after deletion messages/reports are kept, and why) — not yet set; see the Account deletion section below for what actually happens today]</span>.
+      Once your account is deleted (see below), a proof-review screenshot or a report involving
+      your account is kept for up to 12 months after it's resolved — long enough to cover a
+      dispute, chargeback, or legal claim raised after the fact — and then deleted. A report
+      that's never resolved is kept until it is. The underlying record that a collaboration
+      happened, and its outcome, is kept indefinitely as part of our collaboration history; only
+      the screenshot itself is deleted after 12 months, since the content link you shared stays
+      relevant to your own portfolio.
     </p>
   </section>
 
@@ -149,18 +156,16 @@
     <h2>Account deletion — what actually happens</h2>
     <p>
       You can delete your own account at any time from Profile → Delete account in the app. This
-      immediately clears your name, phone number, social handles, location, profile photo, and
-      portfolio links from your account, and cancels any active collaborations.
+      immediately clears your name, phone number, social handles, location, and portfolio links
+      from your account; deletes your profile photo from our storage entirely; and cancels any
+      active collaborations.
     </p>
     <p>
-      To be accurate about what this doesn't do: messages you've sent, your proof
-      submissions (including any uploaded screenshot), and any reports involving your account are
-      <strong>not deleted or anonymised</strong> — they're kept as a record, still linked to
-      your (otherwise cleared) account, so FoodieNet can resolve disputes and maintain accurate
-      collaboration records.
-      <span class="pending">[PENDING — justified retention periods for these categories, and whether/when they should be deleted or genuinely anonymised instead — not yet decided; this policy will be updated once that's resolved]</span>.
-      Files you've uploaded (e.g. a profile photo or proof screenshot) are also not currently deleted from our storage provider when you delete
-      your account — we're addressing this.
+      To be accurate about what this doesn't do: your proof submissions and any reports involving
+      your account are <strong>not deleted at the time of account deletion</strong> — they're kept
+      as a record, still linked to your (otherwise cleared) account, so FoodieNet can resolve
+      disputes and maintain accurate collaboration records. See "Data retention" above for how
+      long, and what's deleted automatically afterward.
     </p>
     <p>
       Deleting your account doesn't cancel a collaboration obligation you'd already
@@ -171,9 +176,7 @@
   <section>
     <h2>Children</h2>
     <p>
-      FoodieNet is not directed at children under
-      <span class="pending">[PENDING — final minimum age — see the Terms of Service for the current status of this decision]</span>,
-      and we don't knowingly collect their data.
+      FoodieNet is not directed at children under 18, and we don't knowingly collect their data.
     </p>
   </section>
 
